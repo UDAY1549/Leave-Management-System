@@ -1,12 +1,12 @@
 
 ````markdown
-# 📝 Leave Management System - ASP.NET Core MVC
+ 📝 Leave Management System - ASP.NET Core MVC
 
 This is a Leave Management System built with ASP.NET Core MVC, Entity Framework Core, and Identity. It allows Admins, Managers, and Employees to manage leave requests efficiently.
 
 ---
 
-## 🚀 Features
+ 🚀 Features
 
 - User roles: Admin, Manager, Employee
 - Role-based access control
@@ -15,7 +15,7 @@ This is a Leave Management System built with ASP.NET Core MVC, Entity Framework 
 
 ---
 
-## ⚙️ Technologies Used
+ ⚙️ Technologies Used
 
 - ASP.NET Core MVC (.NET 6+)
 - Entity Framework Core
@@ -26,16 +26,16 @@ This is a Leave Management System built with ASP.NET Core MVC, Entity Framework 
 
 ---
 
-## 🛠️ Getting Started
+ 🛠️ Getting Started
 
-### 1. Clone the Repository
+ 1. Clone the Repository
 
 ```bash
 git clone https://github.com/UDAY1549/Leave-Management-System.git
 cd LeaveManagementSystemJSE
 ````
 
-### 2. Set up Database
+ 2. Set up Database
 
 Update `appsettings.json`:
 
@@ -51,7 +51,7 @@ Then apply migrations:
 dotnet ef database update
 ```
 
-### 3. Seed Data (Roles + Sample Users)
+ 3. Seed Data (Roles + Sample Users)
 
 Seeded on first run in `Program.cs`:
 
@@ -61,7 +61,7 @@ await IdentitySeed.InitializeAsync(app.Services);
 
 ---
 
-## 🔐 Login Credentials (Seeded)
+ 🔐 Login Credentials (Seeded)
 
 | Role     | Email                                                   | Password     |
 | -------- | ------------------------------------------------------- | ------------ |
@@ -73,7 +73,7 @@ await IdentitySeed.InitializeAsync(app.Services);
 
 ---
 
-## 🖥️ Running the Application
+ 🖥️ Running the Application
 
 ```bash
 dotnet build
@@ -85,7 +85,7 @@ Navigate to:
 
 ---
 
-## 🏗️ Architecture Notes
+ 🏗️ Architecture Notes
 
 * **Repository Pattern** used for separation of concerns (`ILeaveRequestRepository`)
 * **Seed Service** initializes Roles + Users with manager–employee relationships
@@ -94,7 +94,7 @@ Navigate to:
 
 ---
 
-## 🧪 Testing (Manual)
+ 🧪 Testing (Manual)
 
 * Login as Admin: View all pending manager leave requests.
 * Login as Manager: Approve/Reject employees in the same team only.
@@ -104,12 +104,12 @@ Navigate to:
 
 ---
 
-## 📄 2. Architecture Decisions – `ARCHITECTURE.md`
+ 📄 2. Architecture Decisions – `ARCHITECTURE.md`
 
 ```markdown
-# 🏗️ Architecture Overview
+ 🏗️ Architecture Overview
 
-## 1. Layered Design
+ 1. Layered Design
 
 - **Presentation Layer**: ASP.NET Razor Views, HTML + Bootstrap
 - **Controller Layer**: Handles logic, authorization, routing
@@ -118,9 +118,9 @@ Navigate to:
 
 ---
 
-## 2. Patterns Used
+ 2. Patterns Used
 
-### ✅ Repository Pattern
+ ✅ Repository Pattern
 
 Interface-based access to data models:
 ```csharp
@@ -134,7 +134,7 @@ public interface ILeaveRequestRepository {
 }
 ````
 
-### ✅ Seed Pattern
+ ✅ Seed Pattern
 
 Seeds Identity Roles and Users:
 
@@ -143,7 +143,7 @@ Seeds Identity Roles and Users:
 
 ---
 
-## 3. Role-Based Access
+ 3. Role-Based Access
 
 * Uses `[Authorize(Roles = "RoleName")]`
 * Role-specific dashboards:
@@ -153,7 +153,7 @@ Seeds Identity Roles and Users:
 
 ---
 
-## 4. Identity & Authorization
+ 4. Identity & Authorization
 
 * ASP.NET Identity is used for:
 
@@ -163,7 +163,7 @@ Seeds Identity Roles and Users:
 
 ---
 
-## 5. Database Schema (Simplified)
+ 5. Database Schema (Simplified)
 
 * `AspNetUsers` ← extends `ApplicationUser`
 * `LeaveRequests`
@@ -175,48 +175,48 @@ Seeds Identity Roles and Users:
 
 ---
 
-## 👤 3. User Guides – `USER_GUIDE.md`
+ 👤 3. User Guides – `USER_GUIDE.md`
 
 ```markdown
-# 👤 User Guide - Leave Management System
+ 👤 User Guide - Leave Management System
 
 ---
 
-## 1. Admin
+ 1. Admin
 
-### ✅ Capabilities
+ ✅ Capabilities
 - Login using `admin@company.com / Manager@123`
 - View pending leave requests **by Managers**
 - Monitor system usage
 
-### 📍 Route: `/LeaveRequests/AdminDashboard`
+ 📍 Route: `/LeaveRequests/AdminDashboard`
 
 ---
 
-## 2. Manager
+ 2. Manager
 
-### ✅ Capabilities
+ ✅ Capabilities
 - Login as `colinhorton@amce.com` or `miltoncoleman@amce.com`
 - Approve/Reject leave requests from their team only
 - Cannot approve their own leave
 
-### 📍 Route: `/LeaveRequests/ManagerDashboard`
+ 📍 Route: `/LeaveRequests/ManagerDashboard`
 
 ---
 
-## 3. Employee
+ 3. Employee
 
-### ✅ Capabilities
+ ✅ Capabilities
 - Login as `ellajefferson@acme.com` etc.
 - Apply for leave
 - Edit/Delete **only pending** leave
 - Track leave status
 
-### 📍 Route: `/LeaveRequests`
+ 📍 Route: `/LeaveRequests`
 
 ---
 
-## 🛂 Role Summary
+ 🛂 Role Summary
 
 | Role     | Can Apply | Can Approve | View Others | Dashboard Access |
 |----------|-----------|-------------|-------------|------------------|
