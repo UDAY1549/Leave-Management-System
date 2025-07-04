@@ -224,3 +224,18 @@ Seeds Identity Roles and Users:
 | Manager  | ✅        | ✅ (team)   | Own team     | Yes              |
 | Employee | ✅        | ❌          | ❌           | No               |
 ````
+
+![Screenshot (158)](https://github.com/user-attachments/assets/6a552f0d-4c10-42f4-bf19-8ce37c579e70)
+![Screenshot (159)](https://github.com/user-attachments/assets/d934187d-3665-4f5b-a415-86035116fe98)
+![Screenshot (160)](https://github.com/user-attachments/assets/f265c6f5-dc6a-4417-b852-457b78fe7cc9)
+![Screenshot (161)](https://github.com/user-attachments/assets/1e443999-2e02-4e7d-a199-3a859d17324d)
+![Screenshot (162)](https://github.com/user-attachments/assets/b23eb494-e1d1-4e0b-b2ee-b8674ad29f35)
+![Screenshot (163)](https://github.com/user-attachments/assets/52908185-f7e4-4ec5-976d-6a874e02f867)
+![Screenshot (164)](https://github.com/user-attachments/assets/ce5048ad-2165-4e11-b40f-0a22f6b13315)
+![Screenshot (165)](https://github.com/user-attachments/assets/3d11eca5-d901-43e9-b2df-9b603d7e0096)
+![Screenshot (166)](https://github.com/user-attachments/assets/c4928bf3-c9df-45c5-90c9-1a9a07aab1aa)
+
+
+
+
+
