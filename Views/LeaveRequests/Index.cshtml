@@ -1,0 +1,62 @@
+@model IEnumerable<LeaveManagementSystemJSE.Models.LeaveRequest>
+@using Microsoft.AspNetCore.Identity
+@using LeaveManagementSystemJSE.Models
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Leave Requests";
+    var isManager = User.IsInRole("Manager");
+    var currentUserId = UserManager.GetUserId(User);
+}
+
+<h2>Leave Requests</h2>
+
+<a class="btn btn-primary mb-3" asp-controller="LeaveRequests" asp-action="Create">Create New</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Employee Name</th>
+            <th>Leave Type</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ApplicationUser?.UserName</td>
+                <td>@item.Type</td>
+                <td>@item.StartDate.ToShortDateString()</td>
+                <td>@item.EndDate.ToShortDateString()</td>
+                <td>@item.Status</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                        @* Only allow Edit/Delete for the user who submitted the request *@
+                        @if (!isManager && item.ApplicationUserId == currentUserId)
+                        {
+                            <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        }
+
+                        @* Only allow assigned manager to approve/reject the employee’s request *@
+                        @if (isManager 
+                            && item.Status == LeaveManagementSystemJSE.Models.LeaveStatus.Pending 
+                            && item.ApplicationUser?.ManagerId == currentUserId 
+                            && item.ApplicationUserId != currentUserId)
+                        {
+                            <a class="btn btn-sm btn-success" asp-action="Approve" asp-route-id="@item.Id">Approve</a>
+                            <a class="btn btn-sm btn-danger" asp-action="Reject" asp-route-id="@item.Id">Reject</a>
+                        }
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+@model LeaveManagementSystemJSE.Models.LeaveRequest
+
+<h2>Delete Leave Request</h2>
+
+<div>
+    <h4>Are you sure you want to delete this?</h4>
+    <div><strong>Employee:</strong> @Model.EmployeeName</div>
+    <div><strong>Type:</strong> @Model.Type</div>
+    <div><strong>Start:</strong> @Model.StartDate.ToShortDateString()</div>
+    <div><strong>End:</strong> @Model.EndDate.ToShortDateString()</div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger mt-2">Delete</button>
+    <a class="btn btn-secondary mt-2" asp-action="Index">Cancel</a>
+</form>

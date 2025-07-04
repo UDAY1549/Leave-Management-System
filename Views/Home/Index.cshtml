@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Leave Management System";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">JSE Leave Management System</h1>
+    <p class="lead mt-3">Manage your leaves efficiently get approvals and updates.</p>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p class="mt-4">
+            <a class="btn btn-primary btn-lg" asp-controller="LeaveRequests" asp-action="Index">View Leave Requests</a>
+        </p>
+    }
+    else
+    {
+       <p class="mt-4">
+        <a class="btn btn-success btn-lg" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        <a class="btn btn-outline-primary btn-lg" asp-area="Identity" asp-page="/Account/Register">Register</a>
+      </p>
+
+    }
+</div>

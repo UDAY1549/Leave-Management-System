@@ -1,0 +1,185 @@
+{
+  "roles": [ "Admin", "Manager", "Employee" ],
+  "managers": [
+    {
+      "UserName": "admin@company.com",
+      "Email": "admin@company.com",
+      "PhoneNumber": "+27 20 915 7545",
+      "EmployeeId": "M001",
+      "TeamName": "Management Team",
+      "Password": "Manager@123",
+      "Role": "Manager"
+    },
+    {
+      "UserName": "colinhorton@amce.com",
+      "Email": "colinhorton@amce.com",
+      "PhoneNumber": "+27 20 915 7545",
+      "EmployeeId": "M002",
+      "TeamName": "Development Team",
+      "Password": "Manager@123",
+      "Role": "Manager"
+    },
+    {
+    "FullName": "Milton Coleman",
+    "UserName": "miltoncoleman@amce.com",
+    "Email": "miltoncoleman@amce.com",
+    "PhoneNumber": "+27 55 937 274",
+    "EmployeeId": "0002",
+    "TeamName": "Support Team",
+    "Role": "Manager",
+    "Password": "Manager@123"
+  }
+  ],
+  "employees": [
+  {
+    "FullName": "Ella Jefferson",
+    "UserName": "ellajefferson@acme.com",
+    "Email": "ellajefferson@acme.com",
+    "PhoneNumber": "+27 55 979 367",
+    "EmployeeId": "2005",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Earl Craig",
+    "UserName": "earlcraig@acme.com",
+    "Email": "earlcraig@acme.com",
+    "PhoneNumber": "+27 20 916 5608",
+    "EmployeeId": "2006",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Marsha Murphy",
+    "UserName": "marshamurphy@acme.com",
+    "Email": "marshamurphy@acme.com",
+    "PhoneNumber": "+27 20 915 7599",
+    "EmployeeId": "2008",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Luis Ortega",
+    "UserName": "luisortega@acme.com",
+    "Email": "luisortega@acme.com",
+    "PhoneNumber": "+27 20 915 7580",
+    "EmployeeId": "2009",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Faye Dennis",
+    "UserName": "fayedennis@acme.com",
+    "Email": "fayedennis@acme.com",
+    "PhoneNumber": "+27 20 915 7581",
+    "EmployeeId": "2010",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Amy Burns",
+    "UserName": "amyburns@acme.com",
+    "Email": "amyburns@acme.com",
+    "PhoneNumber": "+27 20 915 7582",
+    "EmployeeId": "2012",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Darrel Weber",
+    "UserName": "darrelweber@acme.com",
+    "Email": "darrelweber@acme.com",
+    "PhoneNumber": "+27 20 915 7583",
+    "EmployeeId": "2013",
+    "TeamName": "Development Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Charlotte Osborne",
+    "UserName": "charlotteosborne@acme.com",
+    "Email": "charlotteosborne@acme.com",
+    "PhoneNumber": "+27 20 915 7584",
+    "EmployeeId": "1005",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Marie Walters",
+    "UserName": "mariewalters@acme.com",
+    "Email": "mariewalters@acme.com",
+    "PhoneNumber": "+27 20 915 7585",
+    "EmployeeId": "1006",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Leonard Gill",
+    "UserName": "leonardgill@acme.com",
+    "Email": "leonardgill@acme.com",
+    "PhoneNumber": "+27 20 915 7586",
+    "EmployeeId": "1008",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Enrique Thomas",
+    "UserName": "enriquethomas@acme.com",
+    "Email": "enriquethomas@acme.com",
+    "PhoneNumber": "+27 20 915 7587",
+    "EmployeeId": "1009",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Omar Dunn",
+    "UserName": "omardunn@acme.com",
+    "Email": "omardunn@acme.com",
+    "PhoneNumber": "+27 20 915 7588",
+    "EmployeeId": "1010",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Dewey George",
+    "UserName": "deweygeorge@acme.com",
+    "Email": "deweygeorge@acme.com",
+    "PhoneNumber": "+27 20 915 7589",
+    "EmployeeId": "1012",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Rudy Lewis",
+    "UserName": "rudylewis@acme.com",
+    "Email": "rudylewis@acme.com",
+    "PhoneNumber": "+27 20 915 7590",
+    "EmployeeId": "1013",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  },
+  {
+    "FullName": "Neal French",
+    "UserName": "nealfrench@acme.com",
+    "Email": "nealfrench@acme.com",
+    "PhoneNumber": "+27 20 915 7591",
+    "EmployeeId": "1015",
+    "TeamName": "Support Team",
+    "Role": "Employee",
+    "Password": "User@123"
+  }
+  ]
+}

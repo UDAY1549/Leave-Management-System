@@ -1,0 +1,29 @@
+@model List<LeaveManagementSystemJSE.Models.LeaveRequest>
+
+<h2>Pending Leave Requests</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Approve</th>
+            <th>Reject</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmployeeName</td>
+            <td>@item.Type</td>
+            <td>@item.StartDate.ToShortDateString()</td>
+            <td>@item.EndDate.ToShortDateString()</td>
+            <td><a href="/LeaveRequests/Approve/@item.Id">Approve</a></td>
+            <td><a href="/LeaveRequests/Reject/@item.Id">Reject</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

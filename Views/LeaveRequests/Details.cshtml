@@ -1,0 +1,14 @@
+@model LeaveManagementSystemJSE.Models.LeaveRequest
+
+<h2>Leave Request Details</h2>
+
+<div>
+    <div><strong>Employee:</strong> @Model.EmployeeName</div>
+    <div><strong>Type:</strong> @Model.Type</div>
+    <div><strong>Start:</strong> @Model.StartDate.ToShortDateString()</div>
+    <div><strong>End:</strong> @Model.EndDate.ToShortDateString()</div>
+    <div><strong>Status:</strong> @Model.Status</div>
+</div>
+
+<a class="btn btn-primary mt-2" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a class="btn btn-secondary mt-2" asp-action="Index">Back to List</a>
